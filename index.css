@@ -1,0 +1,381 @@
+* {
+    box-sizing: border-box;
+}
+.guide{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 24px;
+    background: #fff;
+    border-bottom: 1px solid #E6DFD3;
+}
+.menu{
+    display: flex;
+    gap: 23px;
+}
+.menu-item{
+    font-size: 17px;
+    color: #9A9182;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.menu-item:hover{
+    color: #C8102E;
+}
+.menu-item.active{
+    color: #C8102E;
+    font-weight: 600;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.logo-img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.logo-text{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.logo-text small{
+    display: block;
+    font-size: 12px;
+    color: #C8102E;
+    letter-spacing: 3px;
+    margin-top: 2px;
+}
+.circle-png{
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.circle-png-track{
+    display: flex;
+    transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.slide{
+    flex:0 0 100%;
+    padding: 60px 48px;
+    color: #fff;
+    min-height: 320px;
+}
+.slide-1{
+    background: url(https://yhxx-images-xcx-1388146993.cos.ap-beijing.myqcloud.com/cut_paper.jpeg) center/cover;
+}
+.slide-2{
+    background: linear-gradient(135deg, #2B6C80, #1A4477);
+}
+.slide-3{
+    background: linear-gradient(135deg, #2D884E, #1A5C32);
+}
+.slide-tag{
+    display: inline-block;
+    font-size: 20px;
+    padding: 6px 22px;
+    border: 1px solid rgba(255,255,255,0.55);
+    border-radius: 999px;
+    margin-bottom: 20px;
+    letter-spacing: 6px;
+}
+.slide h2{
+    font-family: "Noto Serif CJK SC","SimSun",serif;
+    font-size: 50px;
+    margin: 0 0 12px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+.slide::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.1); 
+    z-index: 1;
+}
+.slide > *{
+    position: relative;
+    z-index: 2;
+}
+.slide p{
+    font-size: 22px;
+    margin: 0 0 28px;
+    opacity: 0.92;
+    max-width: 60%;
+    line-height: 1.6;
+}
+.slide-btn{
+    display: inline-block;
+    font-size: 22px;
+    padding: 14px 36px;
+    background: #C9A227;
+    color: #3a2a00;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background:rgba(255, 255, 255, 0.28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.4);
+    z-index: 3;
+}
+.arrow:hover{
+    background: rgba(255,255,255,0.5);
+}
+.arrow.prev{left:20px;}
+.arrow.next{right: 20px;}
+.dots{
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 14px;
+    z-index: 3;
+}
+.dot{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: all 0.25s;
+}
+.dot.active{
+    background: #fff;
+    width: 40px;
+    border-radius: 7px;
+}
+.features{
+    padding: 30px 24px;
+    background: #FAF6F0;
+}
+/*标题*/
+.section-title{
+    text-align: center;
+    margin-bottom: 24px;
+}
+.section-title h2{
+    font-family: "Noto Serif CJK SC","SimSun",serif;
+    font-size: 33px;
+    margin: 0 0 6px;
+    letter-spacing: 3px;
+
+}
+.section-title p{
+    font-size: 15px;
+    color: #9A9182;
+    margin: 0;
+    letter-spacing: 6px;
+}
+.section-title::after{
+    content: " ";
+    display: block;
+    width: 54px;
+    height: 3px;
+    background: #C8102E;
+    margin: 12px auto 0;
+}
+.feature-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+.feature-card{
+    border-radius: 18px;
+    overflow: hidden;
+}
+.feature-top{
+    padding: 27px 21px 21px;
+    color: #fff;
+    text-align: center;
+}
+.feature-1 .feature-top{background: linear-gradient(135deg, #C8102E, #9B0E24);}
+.feature-3 .feature-top{background: linear-gradient(135deg, #2B6CB0, #1A4477);}
+.feature-2 .feature-top{background: linear-gradient(135deg, #2D8B4E, #1A5C32);}
+.feature-icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    font-family: "Noto Serif CJK SC", serif;
+    font-weight: 700;
+}
+.feature-top h3{
+    font-size: 21px;
+    margin: 0 0 6px;
+}
+.feature-top p{
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.85;
+    letter-spacing: 2px;
+}
+/* 卡片白色介绍区 */
+.feature-body{
+    background: #fff;
+    padding: 18px 21px;
+    border: 1px solid #E6DFD3;
+    border-top: none;
+    border-radius: 0 0 18px 18px;
+}
+.feature-body p{
+    font-size: 14px;
+    color: #6B6358;
+    margin: 0 0 12px;
+    line-height: 1.7;
+}
+/* 标签 */
+.feature-tags{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.feature-tag{
+    font-size: 12px;
+    padding: 3px 12px;
+    border-radius: 999px;
+}
+.feature-1 .feature-tag{background: #FAF0F1; color: #C8102E;}
+.feature-3 .feature-tag{background: #EDF2FA; color: #2B6CB0;}
+.feature-2 .feature-tag{background: #EDF7F0; color: #2D8B4E;}
+/*==== 更多精彩 ====*/
+.more{
+    padding: 30px 24px;
+    background: #FAF6F0;
+}
+/*左右分栏*/
+.more-left{
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;   /*左窄右宽*/
+    gap: 18px;
+    align-items: start;
+}
+/*卡片通用*/
+.card-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #E6DFD3;
+}
+.card-head h3{
+    font-size: 21px;
+    margin: 0;
+    color: #C8102E;
+    font-weight: 600;
+}
+.card-head span{
+    font-size: 14px;
+    color: #9A9182;
+    letter-spacing: 3px;
+}
+/*左：活动资讯*/
+.news{
+    background: #fff;
+    border: 1px solid #E6DFD3;
+    border-radius: 18px;
+    padding: 18px;
+}
+.news-list{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    max-height: 220px;
+    overflow-y: auto;   /*超出可上下滑动*/
+}
+.news-item{
+    font-size: 17px;
+    color: #2B2B2B;
+    text-decoration: none;
+    padding: 4px 0;
+    border-bottom: 1px dashed #E6DFD3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 9px;
+}
+.news-item:hover{
+    color: #C8102E;
+}
+.news-item b{
+    font-weight: 400;
+    color: #9A9182;
+    font-size: 14px;
+    flex-shrink: 0; /*日期不被挤压*/
+}
+/*右侧*/
+.more-right{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+/*右上：剪纸作品*/
+.works{
+    background: #fff;
+    border: 1px solid #E6DFD3;
+    border-radius: 18px;
+    padding: 18px;
+    flex: 3;    /*占3份*/
+}
+.works-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+.works-item{
+    aspect-ratio: 1;    /*正方形*/
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #C8102E, #9B0E24);
+}
+.works-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*右下：剪纸走秀视频*/
+.video{
+    background: #fff;
+    border: 1px solid #E6DFD3;
+    border-radius: 18px;
+    padding: 18px;
+    flex: 2;    /*占2份*/
+}
+.video-box{
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    background: #2B2B2B;
+    object-fit: cover;
+}
+.video-cap{
+    font-size: 14px;
+    color: #9A9182;
+    margin-top: 9px;
+    text-align: center;
+}
