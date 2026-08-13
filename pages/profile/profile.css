@@ -1,0 +1,396 @@
+*{
+    box-sizing: border-box;
+}
+.guide{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 24px;
+    background: #fff;
+    border-bottom: 1px solid #E6DFD3;
+}
+.menu{
+    display: flex;
+    gap: 23px;
+}
+.menu-item{
+    font-size: 17px;
+    color: #9A9182;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.menu-item.active{
+    color: #C8102E;
+    font-weight: 600;
+}
+.menu-item:hover{
+    color: #C8102E;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.logo-img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.logo-text{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.logo-text small{
+    display: block;
+    font-size: 12px;
+    color: #C8102E;
+    letter-spacing: 3px;
+    margin-top: 2px;
+}
+.pro-hero{
+    background: linear-gradient(135deg, #C8102E, #9B0E24);
+    padding: 70px 48px;
+    color: #fff;
+    text-align: center;
+}
+.pro-hero h1{
+    font-family: "Noto Serif CJK SC", "SimSun", serif;
+    font-size: 50px;
+    margin: 0 0 12px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+.pro-hero p{
+    font-size: 22px;
+    margin: 0;
+    opacity: 0.9;
+    letter-spacing: 6px;
+}
+.section-title{
+    text-align: center;
+    margin-bottom: 28px;
+    padding: 40px 24px 0;
+}
+.section-title h2{
+    font-family: "Noto Serif CJK SC", "SimSun", serif;
+    font-size: 33px;
+    margin: 0 0 6px;
+    letter-spacing: 3px;
+}
+.section-title p{
+    font-size: 15px;
+    color: #9A9182;
+    margin: 0;
+    letter-spacing: 6px;
+}
+.section-title::after{
+    content: " ";
+    display: block;
+    width: 54px;
+    height: 3px;
+    background: #C8102E;
+    margin: 12px auto 0;
+}
+.overview{
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 24px;
+    padding: 0 24px;
+}
+.overview-text{
+    background: #fff;
+    border: 1px solid #E6DFD3;
+    border-radius: 18px;
+    padding: 32px;
+}
+.overview-text p{
+    font-size: 16px;
+    color: #6B6358;
+    line-height: 1.9;
+    margin: 0 0 16px;
+}
+.overview-text p:last-child{
+    margin-bottom: 0;
+}
+.overview-stats{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.stat-card{
+    background: #fff;
+    border: 1px solid #E6DFD3;
+    border-radius: 18px;
+    padding: 28px 16px;
+    text-align: center;
+}
+.stat-num{
+    font-size: 38px;
+    font-weight: 700;
+    color: #C8102E;
+    font-family: "Noto Serif CJK SC", serif;
+}
+.stat-num span{
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 2px;
+}
+.stat-label{
+    font-size: 13px;
+    color: #9A9182;
+    margin-top: 6px;
+    letter-spacing: 1px;
+}
+.philosophy{
+    padding: 0 24px;
+}
+.philo-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+.philo-card{
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #E6DFD3;
+    background: #fff;
+}
+.philo-top{
+    padding: 30px 24px;
+    color: #fff;
+    text-align: center;
+}
+.philo-card:nth-child(1) .philo-top{
+    background: linear-gradient(135deg, #C8102E, #9B0E24);
+}
+.philo-card:nth-child(2) .philo-top{
+    background: linear-gradient(135deg, #2B6CB0, #1A4477);
+}
+.philo-card:nth-child(3) .philo-top{
+    background: linear-gradient(135deg, #2D8B4E, #1A5C32);
+}
+.philo-icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    font-family: "Noto Serif CJK SC", serif;
+    font-weight: 700;
+}
+.philo-top h3{
+    font-size: 21px;
+    margin: 0 0 6px;
+}
+.philo-top p{
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.85;
+    letter-spacing: 2px;
+}
+.philo-body{
+    padding: 20px 24px;
+}
+.philo-body p{
+    font-size: 14px;
+    color: #6B6358;
+    line-height: 1.7;
+    margin: 0;
+}
+.timeline-wrap{
+    padding: 0 24px;
+}
+.timeline-list{
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
+}
+.timeline-list::before{
+    content: "";
+    position: absolute;
+    left: 90px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: #E6DFD3;
+}
+.timeline-item{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 28px;
+    align-items: flex-start;
+}
+.timeline-year{
+    font-size: 22px;
+    font-weight: 700;
+    color: #C8102E;
+    font-family: "Noto Serif CJK SC", serif;
+    min-width: 70px;
+    text-align: right;
+    padding-top: 18px;
+}
+.timeline-dot{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #C8102E;
+    border: 3px solid #FAF6F0;
+    margin-top: 22px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+.timeline-content{
+    background: #fff;
+    border: 1px solid #E6DFD3;
+    border-radius: 14px;
+    padding: 18px 24px;
+    flex: 1;
+}
+.timeline-content h4{
+    font-size: 17px;
+    margin: 0 0 6px;
+    color: #2B2B2B;
+}
+.timeline-content p{
+    font-size: 14px;
+    color: #9A9182;
+    line-height: 1.7;
+    margin: 0;
+}
+.teachers{
+    padding: 0 24px;
+}
+.teacher-grid{
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 12px;
+    cursor: grab;
+}
+.teacher-card{
+    flex: 0 0 200px;
+    scroll-snap-align: start;
+    background: #fff;
+    border: 1px solid #E6DFD3;
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+}
+.teacher-photo{
+    width: 100%;
+    aspect-ratio: 1;
+}
+.teacher-card:nth-child(1) .teacher-photo{
+    background: linear-gradient(135deg, #C8102E, #9B0E24);
+}
+.teacher-card:nth-child(2) .teacher-photo{
+    background: linear-gradient(135deg, #2B6CB0, #1A4477);
+}
+.teacher-card:nth-child(3) .teacher-photo{
+    background: linear-gradient(135deg, #2D8B4E, #1A5C32);
+}
+.teacher-card:nth-child(4) .teacher-photo{
+    background: linear-gradient(135deg, #C9A227, #9B7A1A);
+}
+.teacher-card:nth-child(5) .teacher-photo{
+    background: linear-gradient(135deg, #8B5CB0, #5C2D77);
+}
+.teacher-card:nth-child(6) .teacher-photo{
+    background: linear-gradient(135deg, #C8102E, #C9A227);
+}
+.teacher-info{
+    padding: 16px;
+}
+.teacher-info h4{
+    font-size: 17px;
+    margin: 0 0 4px;
+}
+.teacher-info p{
+    font-size: 13px;
+    color: #9A9182;
+    margin: 0;
+}
+.gallery{
+    padding: 0 24px;
+}
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+.gallery-item{
+    aspect-ratio: 4/3;
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+}
+.gallery-item:nth-child(1){
+    background: linear-gradient(135deg, #C8102E, #9B0E24);
+}
+.gallery-item:nth-child(2){
+    background: linear-gradient(135deg, #C9A227, #9B7A1A);
+}
+.gallery-item:nth-child(3){
+    background: linear-gradient(135deg, #2B6CB0, #1A4477);
+}
+.gallery-item:nth-child(4){
+    background: linear-gradient(135deg, #2D8B4E, #1A5C32);
+}
+.gallery-item:nth-child(5){
+    background: linear-gradient(135deg, #8B5CB0, #5C2D77);
+}
+.gallery-item:nth-child(6){
+    background: linear-gradient(135deg, #C8102E, #C9A227);
+}
+.honors{
+    padding: 0 24px 48px;
+}
+.honor-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+.honor-card{
+    background: #fff;
+    border: 1px solid #E6DFD3;
+    border-radius: 18px;
+    padding: 28px 20px;
+    text-align: center;
+}
+.honor-badge{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #C9A227, #9B7A1A);
+    margin: 0 auto 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: #fff;
+    font-family: "Noto Serif CJK SC", serif;
+    font-weight: 700;
+}
+.honor-card h4{
+    font-size: 15px;
+    margin: 0 0 4px;
+    color: #2B2B2B;
+}
+.honor-card p{
+    font-size: 13px;
+    color: #9A9182;
+    margin: 0;
+    line-height: 1.6;
+}
